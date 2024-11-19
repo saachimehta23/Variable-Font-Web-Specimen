@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patches</title>
+
+    <!-- monoscpace font from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="maincontainer">
+      <div id="container">
+        <div id="letterBorder" class="letter-border"></div>
+
+        <input
+          type="text"
+          id="letterInput"
+          maxlength="1"
+          placeholder="Enter a letter"
+        />
+      </div>
+
+      <div class="description-right">
+        <div class="scroll-content">
+          <div class="text-description">
+            Patches is a unique variable pixel font inspired by vintage
+            embroidery instruction books, designed to create ornamental borders.
+            Each letter transforms into a 9-patch border that can be seamlessly
+            strung together, allowing for customizable stitch shapes.
+            Additionally, the font offers an alternative version with 18x18
+            patterns, expanding the possibilities for intricate, decorative
+            borders.
+          </div>
+
+          <div class="grid-container">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+            <div>J</div>
+            <div>K</div>
+            <div>L</div>
+            <div>M</div>
+            <div>N</div>
+            <div>O</div>
+            <div>P</div>
+            <div>Q</div>
+            <div>R</div>
+            <div>S</div>
+            <div>T</div>
+            <div>U</div>
+            <div>V</div>
+            <div>W</div>
+            <div>X</div>
+            <div>Y</div>
+            <div>Z</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT? -->
+    <script>
+      const letterInput = document.getElementById("letterInput");
+      const letterBorder = document.getElementById("letterBorder");
+
+      function createLetterBorder(letter) {
+        let top = "";
+        let bottom = "";
+        let left = "";
+        let right = "";
+
+        // Repeat the letter to create the top and bottom borders
+        for (let i = 0; i < 20; i++) {
+          top += `<span>${letter}</span>`;
+          bottom += `<span>${letter}</span>`;
+        }
+
+        // Repeat the letter to create the left and right borders
+        for (let i = 0; i < 20; i++) {
+          left += `<span>${letter}</span>`;
+          right += `<span>${letter}</span>`;
+        }
+
+        // Insert the rotated letters into the border container
+        letterBorder.innerHTML = `
+                <div class="top">${top}</div>
+                <div class="left">${left}</div>
+                <div class="right">${right}</div>
+                <div class="bottom">${bottom}</div>
+            `;
+      }
+
+      // Event listener to update the border when the user types a letter
+      letterInput.addEventListener("input", function () {
+        const letter = letterInput.value.toUpperCase(); // Convert input to uppercase
+        if (letter) {
+          createLetterBorder(letter); // Update the letter border
+        } else {
+          letterBorder.innerHTML = ""; // Clear the border if input is empty
+        }
+      });
+    </script>
+  </body>
+</html>
