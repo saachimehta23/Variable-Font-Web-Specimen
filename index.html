@@ -16,6 +16,7 @@
   </head>
 
   <body>
+   
 
     <div class="top-bar">
       <div class="chomp-dots">PATCHES</div>
@@ -35,34 +36,39 @@
           maxlength="1"
           placeholder="Type A Letter"
         />
-        <div class="inside-text"> <span class="xanh-mono-regular-italic"> instructions to patch: </span><br> 1. enter a letter <br> 2. generate your own Border <br> 3. hoover over the border to reveal the letter! </div>
+        <div class="inside-text"> <span class="xanh-mono-regular-italic"> instructions to patch: </span><br> <br> 1. enter a letter <br> 2. generate your own Border <br> 3. hover over the border to reveal the letter! </div>
       </div>
+
+
 
       
 
       <div class="description-right">
         <div class="scroll-content">
-
           <div class="text-buttons">
           <div class="text-description">
             Patches is a collection of variable pixel fonts inspired by vintage embroidery instruction books, designed to create ornamental borders. Patches 9x9 is a variable pixel font where each letter transforms into a 9-square border that can be seamlessly strung together, allowing for customizable stitch shapes. Patches 18x18 offers an alternative version with 18x18 patterns, expanding the possibilities for intricate, decorative borders. Stitch is a slab-serif pixel typeface with two variable aces to control the outline and the shape of the pixel. 
           </div>
-
+          <img class="responsive" src="assets/images/1x/Asset 68.png">
           <div class="button-container">
 
             <a href="/downloads/Patches9x9.ttf" download="PatchesVF.ttf">
-            <button class="button">Patches 8x8</button></a>
+            <button class="button">Patches 8x8</button>
+          </a>
 
             <a href="/downloads/Patches18x18.otf" download="Patches18x18.otf">
-            <button class="button">Patches 16x16</button></a>
+            <button class="button">Patches 16x16</button>
+          </a>
 
             <a href="/downloads/Stitch Pixel.ttf" download="Stitch Pixel.ttf">
-            <button class="button">Stitch</button></a>
+            <button class="button">Stitch</button>
+          </a>
 
-            <a href="/downloads/Patches-Pixel Typefaces.zip" download="Patches-Pixel Typefaces.zip"></a>
-            <button class="button">Download all</button>
+            <a href="/downloads/Patches-Pixel Typefaces.zip" download="Patches-Pixel Typefaces.zip">
+            <button class="button">Download all</button></a>
           </a>
           </div>
+          
         </div>
           <div class="grid-container">
             <div>A</div>
@@ -101,14 +107,21 @@
             <div>8</div>
             <div>9</div>
           </div>
-        </div>
+
+         
+        
+         
+        
       </div>
     </div>
 
-    <!-- JAVASCRIPT? -->
+    <!-- JAVASCRIPT? from CHATGPT -->
     <script>
+      
       const letterInput = document.getElementById("letterInput");
       const letterBorder = document.getElementById("letterBorder");
+      // const gridLetters = document.querySelectorAll('.grid-container div');
+      // const root = document.querySelector('html');
 
       function createLetterBorder(letter) {
         let top = "";
@@ -146,6 +159,13 @@
           letterBorder.innerHTML = ""; // Clear the border if input is empty
         }
       });
+
+    
+
     </script>
+</div>
+<footer class="footer">
+  <div class=" xanh-mono-regular">Typefaces + Specimen Sheet created by Saachi Mehta, for Type+Code, 2024. Typeset in Xanh Mono.</div>
+</footer>
   </body>
 </html>
