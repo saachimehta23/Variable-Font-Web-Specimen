@@ -16,30 +16,54 @@
   </head>
 
   <body>
+
+    <div class="top-bar">
+      <div class="chomp-dots">PATCHES</div>
+    </div>
+
+    <div class="border-01">RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR</div>
     <div class="maincontainer">
+
+
       <div id="container">
+
         <div id="letterBorder" class="letter-border"></div>
 
         <input
           type="text"
           id="letterInput"
           maxlength="1"
-          placeholder="Enter a letter"
+          placeholder="Type A Letter"
         />
+        <div class="inside-text"> <span class="xanh-mono-regular-italic"> instructions to patch: </span><br> 1. enter a letter <br> 2. generate your own Border <br> 3. hoover over the border to reveal the letter! </div>
       </div>
+
+      
 
       <div class="description-right">
         <div class="scroll-content">
+
+          <div class="text-buttons">
           <div class="text-description">
-            Patches is a unique variable pixel font inspired by vintage
-            embroidery instruction books, designed to create ornamental borders.
-            Each letter transforms into a 9-patch border that can be seamlessly
-            strung together, allowing for customizable stitch shapes.
-            Additionally, the font offers an alternative version with 18x18
-            patterns, expanding the possibilities for intricate, decorative
-            borders.
+            Patches is a collection of variable pixel fonts inspired by vintage embroidery instruction books, designed to create ornamental borders. Patches 9x9 is a variable pixel font where each letter transforms into a 9-square border that can be seamlessly strung together, allowing for customizable stitch shapes. Patches 18x18 offers an alternative version with 18x18 patterns, expanding the possibilities for intricate, decorative borders. Stitch is a slab-serif pixel typeface with two variable aces to control the outline and the shape of the pixel. 
           </div>
 
+          <div class="button-container">
+
+            <a href="/downloads/Patches9x9.ttf" download="PatchesVF.ttf">
+            <button class="button">Patches 8x8</button></a>
+
+            <a href="/downloads/Patches18x18.otf" download="Patches18x18.otf">
+            <button class="button">Patches 16x16</button></a>
+
+            <a href="/downloads/Stitch Pixel.ttf" download="Stitch Pixel.ttf">
+            <button class="button">Stitch</button></a>
+
+            <a href="/downloads/Patches-Pixel Typefaces.zip" download="Patches-Pixel Typefaces.zip"></a>
+            <button class="button">Download all</button>
+          </a>
+          </div>
+        </div>
           <div class="grid-container">
             <div>A</div>
             <div>B</div>
@@ -99,7 +123,7 @@
         }
 
         // Repeat the letter to create the left and right borders
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 7; i++) {
           left += `<span>${letter}</span>`;
           right += `<span>${letter}</span>`;
         }
