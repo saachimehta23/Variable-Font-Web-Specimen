@@ -186,7 +186,7 @@ body {
   gap: 20px;
   padding: 30px;
   justify-content: center;
-  border-image: url("./assets/images/border-01.png") 110 / 20px / 0px round;
+  border-image: url("./assets/images/1x/border01.png") 110 / 20px / 0px round;
   border-style: solid;
 }
 
