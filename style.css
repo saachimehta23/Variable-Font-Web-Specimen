@@ -57,7 +57,7 @@ body {
 /* 16X16 Font */
 @font-face {
   font-family: "patches";
-  src: url('/assets/fonts/Patches16x16-Regular.otf') format('opentype');
+  src: url('assets/fonts/Patches16x16-Regular.otf') format('opentype');
 }
 
 .patches{
